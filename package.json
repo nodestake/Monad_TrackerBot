@@ -1,0 +1,19 @@
+{
+  "name": "monad-trackerbot-public-core",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public core of Monad TrackerBot: wallet commands, confirmed event decoding, and bilingual notifications.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "author": "NodeStake <info@nodestake.org>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodestake/Monad_TrackerBot.git"
+  },
+  "scripts": {
+    "demo": "node examples/demo.ts",
+    "test": "node --test tests/*.test.ts"
+  }
+}

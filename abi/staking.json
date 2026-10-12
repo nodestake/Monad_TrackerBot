@@ -1,0 +1,335 @@
+{
+  "source": "https://docs.monad.xyz/reference/staking/api.md",
+  "events": [
+    {
+      "name": "ClaimRewards",
+      "signature": "ClaimRewards(uint64,address,uint256,uint64)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "delegator",
+          "type": "address",
+          "indexed": true
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false
+        },
+        {
+          "name": "epoch",
+          "type": "uint64",
+          "indexed": false
+        }
+      ],
+      "topic": "0xcb607e6b63c89c95f6ae24ece9fe0e38a7971aa5ed956254f1df47490921727b"
+    },
+    {
+      "name": "CommissionChanged",
+      "signature": "CommissionChanged(uint64,uint256,uint256)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "oldCommission",
+          "type": "uint256",
+          "indexed": false
+        },
+        {
+          "name": "newCommission",
+          "type": "uint256",
+          "indexed": false
+        }
+      ],
+      "topic": "0xd1698d3454c5b5384b70aaae33f1704af7c7e055f0c75503ba3146dc28995920"
+    },
+    {
+      "name": "Delegate",
+      "signature": "Delegate(uint64,address,uint256,uint64)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "delegator",
+          "type": "address",
+          "indexed": true
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false
+        },
+        {
+          "name": "activationEpoch",
+          "type": "uint64",
+          "indexed": false
+        }
+      ],
+      "topic": "0xe4d4df1e1827dd28252fd5c3cd7ebccd3da6e0aa31f74c828f3c8542af49d840"
+    },
+    {
+      "name": "EpochChanged",
+      "signature": "EpochChanged(uint64,uint64)",
+      "inputs": [
+        {
+          "name": "oldEpoch",
+          "type": "uint64",
+          "indexed": false
+        },
+        {
+          "name": "newEpoch",
+          "type": "uint64",
+          "indexed": false
+        }
+      ],
+      "topic": "0x4fae4dbe0ed659e8ce6637e3c273cd8e4d3bf029b9379a9e8b3f3f27dbef809b"
+    },
+    {
+      "name": "Undelegate",
+      "signature": "Undelegate(uint64,address,uint8,uint256,uint64)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "delegator",
+          "type": "address",
+          "indexed": true
+        },
+        {
+          "name": "withdrawId",
+          "type": "uint8",
+          "indexed": false
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false
+        },
+        {
+          "name": "activationEpoch",
+          "type": "uint64",
+          "indexed": false
+        }
+      ],
+      "topic": "0x3e53c8b91747e1b72a44894db10f2a45fa632b161fdcdd3a17bd6be5482bac62"
+    },
+    {
+      "name": "ValidatorCreated",
+      "signature": "ValidatorCreated(uint64,address,uint256)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "authAddress",
+          "type": "address",
+          "indexed": true
+        },
+        {
+          "name": "commission",
+          "type": "uint256",
+          "indexed": false
+        }
+      ],
+      "topic": "0x6f8045cd38e512b8f12f6f02947c632e5f25af03aad132890ecf50015d97c1b2"
+    },
+    {
+      "name": "ValidatorRewarded",
+      "signature": "ValidatorRewarded(uint64,address,uint256,uint64)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "from",
+          "type": "address",
+          "indexed": true
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false
+        },
+        {
+          "name": "epoch",
+          "type": "uint64",
+          "indexed": false
+        }
+      ],
+      "topic": "0x3a420a01486b6b28d6ae89c51f5c3bde3e0e74eecbb646a0c481ccba3aae3754"
+    },
+    {
+      "name": "ValidatorStatusChanged",
+      "signature": "ValidatorStatusChanged(uint64,uint64)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "flags",
+          "type": "uint64",
+          "indexed": false
+        }
+      ],
+      "topic": "0xc95966754e882e03faffaf164883d98986dda088d09471a35f9e55363daf0c53"
+    },
+    {
+      "name": "Withdraw",
+      "signature": "Withdraw(uint64,address,uint8,uint256,uint64)",
+      "inputs": [
+        {
+          "name": "validatorId",
+          "type": "uint64",
+          "indexed": true
+        },
+        {
+          "name": "delegator",
+          "type": "address",
+          "indexed": true
+        },
+        {
+          "name": "withdrawId",
+          "type": "uint8",
+          "indexed": false
+        },
+        {
+          "name": "amount",
+          "type": "uint256",
+          "indexed": false
+        },
+        {
+          "name": "withdrawEpoch",
+          "type": "uint64",
+          "indexed": false
+        }
+      ],
+      "topic": "0x63030e4238e1146c63f38f4ac81b2b23c8be28882e68b03f0887e50d0e9bb18f"
+    }
+  ],
+  "functions": [
+    {
+      "name": "addValidator",
+      "signature": "addValidator(bytes,bytes,bytes)",
+      "selector": "0xf145204c"
+    },
+    {
+      "name": "changeCommission",
+      "signature": "changeCommission(uint64,uint256)",
+      "selector": "0x9bdcc3c8"
+    },
+    {
+      "name": "claimRewards",
+      "signature": "claimRewards(uint64)",
+      "selector": "0xa76e2ca5"
+    },
+    {
+      "name": "compound",
+      "signature": "compound(uint64)",
+      "selector": "0xb34fea67"
+    },
+    {
+      "name": "delegate",
+      "signature": "delegate(uint64)",
+      "selector": "0x84994fec"
+    },
+    {
+      "name": "externalReward",
+      "signature": "externalReward(uint64)",
+      "selector": "0xe4b3303b"
+    },
+    {
+      "name": "getConsensusValidatorSet",
+      "signature": "getConsensusValidatorSet(uint32)",
+      "selector": "0xfb29b729"
+    },
+    {
+      "name": "getDelegations",
+      "signature": "getDelegations(address,uint64)",
+      "selector": "0x4fd66050"
+    },
+    {
+      "name": "getDelegator",
+      "signature": "getDelegator(uint64,address)",
+      "selector": "0x573c1ce0"
+    },
+    {
+      "name": "getDelegators",
+      "signature": "getDelegators(uint64,address)",
+      "selector": "0xa0843a26"
+    },
+    {
+      "name": "getEpoch",
+      "signature": "getEpoch()",
+      "selector": "0x757991a8"
+    },
+    {
+      "name": "getProposerValId",
+      "signature": "getProposerValId()",
+      "selector": "0xfbacb0be"
+    },
+    {
+      "name": "getExecutionValidatorSet",
+      "signature": "getExecutionValidatorSet(uint32)",
+      "selector": "0x7cb074df"
+    },
+    {
+      "name": "getSnapshotValidatorSet",
+      "signature": "getSnapshotValidatorSet(uint32)",
+      "selector": "0xde66a368"
+    },
+    {
+      "name": "getValidator",
+      "signature": "getValidator(uint64)",
+      "selector": "0x2b6d639a"
+    },
+    {
+      "name": "getWithdrawalRequest",
+      "signature": "getWithdrawalRequest(uint64,address,uint8)",
+      "selector": "0x56fa2045"
+    },
+    {
+      "name": "syscallOnEpochChange",
+      "signature": "syscallOnEpochChange(uint64)",
+      "selector": "0x1d4e9f02"
+    },
+    {
+      "name": "syscallReward",
+      "signature": "syscallReward(address)",
+      "selector": "0x791bdcf3"
+    },
+    {
+      "name": "syscallSnapshot",
+      "signature": "syscallSnapshot()",
+      "selector": "0x157eeb21"
+    },
+    {
+      "name": "undelegate",
+      "signature": "undelegate(uint64,uint256,uint8)",
+      "selector": "0x5cf41514"
+    },
+    {
+      "name": "withdraw",
+      "signature": "withdraw(uint64,uint8)",
+      "selector": "0xaed2ee73"
+    }
+  ]
+}
